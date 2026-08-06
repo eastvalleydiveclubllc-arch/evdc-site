@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# East Valley Dive Club — website
 
-## Getting Started
+The website for East Valley Dive Club in Mesa, Arizona.
 
-First, run the development server:
+**If you're Laura:** you're in the right place. This is where the website's
+files live. You don't need to understand any of it — you'll never edit these
+files directly. The only thing you need this repository for is one step:
+connecting it to Netlify, which is covered in the setup packet.
+
+Nothing here can break the live site by being looked at.
+
+---
+
+## Connecting this to Netlify
+
+In Netlify: **Add new project → Import an existing project → GitHub →
+`evdc-site` → Deploy.**
+
+Don't change the build settings it shows you. They're already set correctly by
+`netlify.toml` in this folder:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Publish directory | `out` |
+| Node version | 22 |
+
+## For developers
+
+Next.js 16 (App Router), TypeScript, Tailwind v4, framer-motion. npm.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export → out/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site is a **static export** (`output: "export"` in `next.config.ts`) —
+no server, no API routes, no serverless functions. It deploys as plain files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All site copy lives in **`lib/content.ts`**. Edit that one file to change any
+wording on the site; the components read from it. Images still needed are
+listed in `IMAGE_SLOTS.md`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Known placeholders
 
-## Learn More
+The first version was built before any details were gathered from the club, so
+some content is deliberately unfinished and some is unverified:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The coach section is intentionally **name-free** until the club confirms who
+  coaches — don't invent a name.
+- No phone number, pricing, or practice schedule anywhere on the site.
+- Registration and contact buttons don't yet lead anywhere real.
+- `public/logo.svg` is a stand-in, not the club's actual logo.
+- Marketing claims in `lib/content.ts` (facility features, competitive
+  results) were written without verification and are pending sign-off.
