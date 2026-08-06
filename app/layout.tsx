@@ -15,7 +15,12 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eastvalleydiveclub.vercel.app"),
+  // Netlify sets URL to the project's primary domain at build time, so this
+  // corrects itself the moment the real domain is bought and set as primary —
+  // no code change needed at launch.
+  metadataBase: new URL(
+    process.env.URL ?? "https://eastvalleydiveclub.netlify.app",
+  ),
   title: "East Valley Dive Club — Mesa, Arizona",
   description:
     "Arizona's top springboard and platform diving club. Beginner lessons through National qualifiers. Mesa, AZ.",

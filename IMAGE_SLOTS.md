@@ -1,7 +1,7 @@
 # Image slots to replace
 
 This v0 site ships with a typographic hero (no photo) and an SVG logo
-approximation. When Kayla sends real assets, swap these files:
+approximation. When the club sends real assets, swap these files:
 
 | Slot            | File                  | Recommended     | Used by              |
 | --------------- | --------------------- | --------------- | -------------------- |

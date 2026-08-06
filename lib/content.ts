@@ -94,12 +94,12 @@ export const programs = {
 } as const;
 
 export const coach = {
-  eyebrow: "Head Coach",
-  name: "Kayla",
-  title: "Owner · Head Coach",
-  bioPlaceholder: [
-    "Kayla owns and coaches East Valley Dive Club. She'll write this section herself — this is a placeholder until her bio lands here.",
-    "Meanwhile: she's the reason athletes cross the valley to train here. Full bio coming soon.",
+  eyebrow: "Coaching",
+  headline: "Meet the coaches",
+  title: "",
+  bio: [
+    "This section will introduce the coaching staff — who runs practice, what they competed in, and how they teach.",
+    "Names, bios and photos are being added.",
   ],
 } as const;
 
