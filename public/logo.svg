@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" aria-label="East Valley Dive Club">
+  <!-- Wordmark: E [diver] D C -->
+  <g font-family="Georgia, serif" font-weight="700" font-size="110" letter-spacing="-2">
+    <!-- E -->
+    <text x="0" y="92" fill="#b8b4ad">E</text>
+    <!-- D -->
+    <text x="192" y="92" fill="#b8b4ad">D</text>
+    <!-- C -->
+    <text x="260" y="92" fill="#b8b4ad">C</text>
+  </g>
+  <!-- Diver in tuck (forms the V) -->
+  <g transform="translate(82, 8)" fill="#c8102e">
+    <!-- head -->
+    <circle cx="40" cy="22" r="14"/>
+    <!-- torso tucked -->
+    <path d="M28 38 Q20 52 30 66 Q44 78 62 70 Q76 62 72 48 Q66 38 52 38 Z"/>
+    <!-- legs extended up-right (the V leg) -->
+    <path d="M58 42 L100 6 L108 14 L66 50 Z"/>
+    <!-- arms tucked -->
+    <path d="M34 52 Q28 60 38 68 Q44 70 46 64 Q44 58 40 56 Z"/>
+  </g>
+</svg>
