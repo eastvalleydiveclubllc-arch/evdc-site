@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { site } from "@/lib/content";
+import { site, REGISTRATION_URL } from "@/lib/content";
 
 const links = [
   { href: "#about", label: "The Club" },
@@ -56,7 +56,9 @@ export function Nav() {
         </ul>
 
         <a
-          href="#join"
+          href={REGISTRATION_URL}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-crimson hover:bg-crimson-deep text-bone px-5 py-2 text-sm font-medium transition-colors"
         >
           Register

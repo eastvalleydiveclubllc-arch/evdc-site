@@ -25,6 +25,28 @@ export function Join() {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 flex flex-col sm:flex-row gap-4">
+          <a
+            href={join.ctaPrimary.href}
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-crimson hover:bg-crimson-deep text-bone px-8 py-4 text-base font-medium tracking-wide transition-colors"
+          >
+            {join.ctaPrimary.label}
+            <span className="transition-transform group-hover:translate-x-1" aria-hidden>
+              →
+            </span>
+          </a>
+          <a
+            href={join.ctaSecondary.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/25 hover:border-ink/60 text-ink px-8 py-4 text-base font-medium tracking-wide transition-colors"
+          >
+            {join.ctaSecondary.label}
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { site } from "@/lib/content";
+import { site, PARENT_PORTAL_URL } from "@/lib/content";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -11,6 +11,9 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6 text-sm text-stone-400">
+          <a href={PARENT_PORTAL_URL} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors">
+            Parent Portal
+          </a>
           <a href={site.instagram} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors">
             Instagram
           </a>

@@ -50,7 +50,7 @@ some content is deliberately unfinished and some is unverified:
 - The coach section is intentionally **name-free** until the club confirms who
   coaches — don't invent a name.
 - No pricing or practice schedule anywhere on the site (real phone + email added 2026-08-12).
-- Registration and contact buttons don't yet lead anywhere real.
+- Registration + parent portal now link to JackRabbit (added 2026-08-12); contact email/phone are real.
 - `public/logo.svg` is a stand-in, not the club's actual logo.
 - Marketing claims in `lib/content.ts` (facility features, competitive
   results) were written without verification and are pending sign-off.

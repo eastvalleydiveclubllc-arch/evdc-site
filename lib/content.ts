@@ -1,7 +1,12 @@
 // All site copy lives here. Edit this file to retune every word on the site.
 // Placeholders marked with `PLACEHOLDER_` prefixes — safe to swap live.
 
-export const REGISTRATION_URL_PLACEHOLDER = "#join";
+// JackRabbit links from Laura, 2026-08-12. Registration = new families;
+// the parent portal is where existing families manage classes and billing.
+export const REGISTRATION_URL =
+  "https://app.jackrabbitclass.com/regv2.asp?id=558510";
+export const PARENT_PORTAL_URL =
+  "https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?orgId=558510";
 
 export const site = {
   name: "East Valley Dive Club",
@@ -165,6 +170,8 @@ export const join = {
         "Card on file in the portal. Simple, predictable monthly dues.",
     },
   ],
+  ctaPrimary: { label: "Register online", href: REGISTRATION_URL },
+  ctaSecondary: { label: "Parent portal login", href: PARENT_PORTAL_URL },
 } as const;
 
 export const contact = {
