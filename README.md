@@ -49,8 +49,15 @@ some content is deliberately unfinished and some is unverified:
 
 - The coach section is intentionally **name-free** until the club confirms who
   coaches — don't invent a name.
-- No phone number, pricing, or practice schedule anywhere on the site.
+- No pricing or practice schedule anywhere on the site (real phone + email added 2026-08-12).
 - Registration and contact buttons don't yet lead anywhere real.
 - `public/logo.svg` is a stand-in, not the club's actual logo.
 - Marketing claims in `lib/content.ts` (facility features, competitive
   results) were written without verification and are pending sign-off.
+
+## Image credits
+
+Both photos are CC0 / public domain (no attribution required); sources kept for the record:
+
+- `public/images/springboard.jpg` — "Crystal Clear Swimming Pool Water with Diving Board" (CC0), via Openverse / Flickr: https://live.staticflickr.com/502/18794504112_7bf6dca615_b.jpg
+- `public/images/underwater.jpg` — "swimming pool" underwater light (CC0), via Openverse / Flickr: https://live.staticflickr.com/2397/2140972884_c13023e9ef_b.jpg

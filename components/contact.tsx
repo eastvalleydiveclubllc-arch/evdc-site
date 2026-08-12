@@ -25,6 +25,12 @@ export function Contact() {
             </span>
           </a>
           <a
+            href={site.phoneHref}
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 hover:border-white/50 hover:bg-white/5 text-bone px-8 py-4 text-base font-medium tracking-wide transition-colors"
+          >
+            Call or text
+          </a>
+          <a
             href={site.instagram}
             target="_blank"
             rel="noreferrer"
@@ -35,7 +41,7 @@ export function Contact() {
         </div>
 
         <div className="mt-12 text-xs uppercase tracking-[0.22em] text-stone-500">
-          {site.email}
+          {site.email} · {site.phone}
         </div>
       </div>
     </section>

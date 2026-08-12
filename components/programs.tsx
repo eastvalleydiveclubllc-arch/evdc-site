@@ -20,7 +20,7 @@ export function Programs() {
           {programs.items.map((p) => (
             <article
               key={p.name}
-              className={`group relative bg-charcoal p-8 sm:p-10 min-h-[280px] flex flex-col justify-between transition-colors hover:bg-charcoal-2 ${
+              className={`relative bg-charcoal p-8 sm:p-10 min-h-[280px] flex flex-col justify-between ${
                 p.featured ? "lg:col-span-1" : ""
               }`}
             >

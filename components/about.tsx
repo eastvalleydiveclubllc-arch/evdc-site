@@ -17,6 +17,14 @@ export function About() {
           </div>
 
           <div className="flex flex-col gap-10 md:border-l md:border-white/10 md:pl-12">
+            <div className="relative aspect-[3/2] overflow-hidden">
+              <img
+                src="/images/springboard.jpg"
+                alt="Springboard over rippling pool water"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
             {about.stats.map((s) => (
               <div key={s.label}>
                 <div className="font-display text-3xl sm:text-4xl text-bone leading-none">

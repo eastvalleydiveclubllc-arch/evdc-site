@@ -1,7 +1,6 @@
 // All site copy lives here. Edit this file to retune every word on the site.
 // Placeholders marked with `PLACEHOLDER_` prefixes — safe to swap live.
 
-export const CONTACT_EMAIL_PLACEHOLDER = "hello@eastvalleydiveclub.com";
 export const REGISTRATION_URL_PLACEHOLDER = "#join";
 
 export const site = {
@@ -13,8 +12,9 @@ export const site = {
   mapsQuery: "845+S+Crismon+Rd,+Mesa,+AZ+85208",
   instagram: "https://www.instagram.com/eastvalleydiveclub/",
   facebook: "https://www.facebook.com/eastvalleydiveclub/",
-  email: CONTACT_EMAIL_PLACEHOLDER,
-  phonePlaceholder: "",
+  email: "eastvalleydiveclubllc@gmail.com",
+  phone: "480-469-8699",
+  phoneHref: "tel:+14804698699",
 } as const;
 
 export const hero = {

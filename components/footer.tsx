@@ -20,6 +20,9 @@ export function Footer() {
           <a href={`mailto:${site.email}`} className="hover:text-bone transition-colors">
             Email
           </a>
+          <a href={site.phoneHref} className="hover:text-bone transition-colors">
+            {site.phone}
+          </a>
         </div>
 
         <div className="text-xs text-stone-600">
