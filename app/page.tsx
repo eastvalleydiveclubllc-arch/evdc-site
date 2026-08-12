@@ -4,9 +4,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Programs } from "@/components/programs";
-// Coach section hidden until Laura sends bios/photos — restore the import
-// and the <Coach /> render below, plus the "#coach" nav link in nav.tsx.
-// import { Coach } from "@/components/coach";
+import { Coach } from "@/components/coach";
 import { Location } from "@/components/location";
 import { Path } from "@/components/path";
 import { PoolBand } from "@/components/pool-band";
@@ -24,6 +22,7 @@ export default function Home() {
         <Hero />
         <About />
         <Programs />
+        <Coach />
         <Path />
         <Location />
         <PoolBand />

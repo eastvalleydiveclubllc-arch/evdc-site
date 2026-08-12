@@ -1,9 +1,9 @@
 import { coach } from "@/lib/content";
 
 export function Coach() {
-  // Coaches without a bio yet (Laura, Kainoa) stay unrendered until their
-  // text arrives — the display order itself is Laura's and must not change.
-  const roster = coach.coaches.filter((c) => c.bio.length > 0);
+  // Display order is Laura's and must not change. A coach whose bio hasn't
+  // arrived yet (Kainoa) still gets their card, with a placeholder line.
+  const roster = coach.coaches;
 
   return (
     <section id="coach" className="relative bg-ink py-28 sm:py-40 overflow-hidden">
@@ -36,9 +36,11 @@ export function Coach() {
                 {c.name}
               </h3>
               <div className="mt-5 space-y-4 text-stone-300 leading-relaxed text-sm sm:text-base">
-                {c.bio.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+                {c.bio.length > 0 ? (
+                  c.bio.map((p, i) => <p key={i}>{p}</p>)
+                ) : (
+                  <p className="text-stone-500 italic">Bio coming soon.</p>
+                )}
               </div>
             </article>
           ))}
