@@ -7,7 +7,6 @@ import { site } from "@/lib/content";
 const links = [
   { href: "#about", label: "The Club" },
   { href: "#programs", label: "Programs" },
-  { href: "#coach", label: "Coach" },
   { href: "#location", label: "Location" },
   { href: "#join", label: "Join" },
 ];
