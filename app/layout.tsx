@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     description:
       "Arizona's top springboard and platform diving club. Built for the ones who go higher.",
     type: "website",
+    images: ["/images/springboard.jpg"],
   },
 };
 

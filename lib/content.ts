@@ -23,7 +23,7 @@ export const site = {
 } as const;
 
 export const hero = {
-  eyebrow: "Mesa, Arizona · Since the beginning",
+  eyebrow: "Mesa, Arizona · Springboard & Platform",
   headline: {
     pre: "Built for the ones",
     accent: "who go",
@@ -130,7 +130,7 @@ export const coach = {
       name: "Amanda Naylor",
       role: "Coach",
       bio: [
-        "I'm originally from outside Philadelphia and started diving when I was six years old — and fell in love with the sport. I walked on at Rider University, a small school in New Jersey, and decided to train full time after I graduated, training for the 2012 and 2016 Olympics.",
+        "I'm originally from outside Philadelphia and started diving when I was six years old — and fell in love with the sport. I walked on at Rider University, a small school in New Jersey, and decided to train full time after I graduated. I trained for the 2012 and 2016 Olympics.",
         "I'm a two-time national champion, spent four years on the national team, and was a member of the 2016 Olympic performance squad, a 2013 World Team member and finalist in 3-meter synchro, and a two-time Olympic Trials finalist.",
         "I moved to Phoenix in February 2017 and started coaching with East Valley Dive Club in 2018. I love coaching and enjoy sharing the knowledge I've gained from all my experiences as a diver and a coach. Outside of coaching, I work from home full time at CVS Health.",
       ],
@@ -193,7 +193,7 @@ export const path = {
     {
       tier: "IV",
       name: "Nationals",
-      blurb: "The top of the USA Diving ladder. A few EVDC divers get there every year.",
+      blurb: "The top of the USA Diving ladder.",
     },
   ],
 } as const;
@@ -228,6 +228,6 @@ export const join = {
 export const contact = {
   eyebrow: "Contact",
   title: "Questions?\nCoaches answer their own email.",
-  sub: "Tap below — we'll get back to you within a day, usually sooner.",
+  sub: "Tap below — a coach will get back to you.",
   emailLabel: "Email the club",
 } as const;
