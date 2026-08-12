@@ -98,13 +98,58 @@ export const programs = {
   ],
 } as const;
 
+// Coach order is Laura's explicit instruction (2026-08-12):
+// Laura, Kayla, Amanda, Kainoa, Kendall, Rocky.
+// Laura's and Kainoa's bios are still inbound — empty bio = not rendered.
+// Bios are the coaches' own words, lightly copyedited for typos only.
 export const coach = {
   eyebrow: "Coaching",
   headline: "Meet the coaches",
-  title: "",
-  bio: [
-    "This section will introduce the coaching staff — who runs practice, what they competed in, and how they teach.",
-    "Names, bios and photos are being added.",
+  coaches: [
+    {
+      name: "Laura",
+      role: "",
+      bio: [],
+    },
+    {
+      name: "Kayla Huffman",
+      role: "Assistant Coach",
+      bio: [
+        "I'm originally from Flagstaff, where I dove for Northern Arizona Divers for 14 years. While diving for NAD I was a USA Diving National qualifier in the 14-15 and 16-18 age groups and qualified for AAU Nationals at 15, 16, 17, and 18, making finals in every age group.",
+        "After my diving career I spent two years as an assistant coach for NAD. I originally applied for the military, then an auto mechanics job brought me to Mesa — and along the way, EVDC reached out about coaching. I've been with the club about three years now.",
+        "When I'm not coaching, I work full time for an HVAC test and balance company in Tempe. And when I'm not working, I'm most likely camping or spending time with family and friends.",
+      ],
+    },
+    {
+      name: "Amanda Naylor",
+      role: "Coach",
+      bio: [
+        "I'm originally from outside Philadelphia and started diving when I was six years old — and fell in love with the sport. I walked on at Rider University, a small school in New Jersey, and decided to train full time after I graduated, training for the 2012 and 2016 Olympics.",
+        "I'm a two-time national champion, spent four years on the national team, and was a member of the 2016 Olympic performance squad, a 2013 World Team member and finalist in 3-meter synchro, and a two-time Olympic Trials finalist.",
+        "I moved to Phoenix in February 2017 and started coaching with East Valley Dive Club in 2018. I love coaching and enjoy sharing the knowledge I've gained from all my experiences as a diver and a coach. Outside of coaching, I work from home full time at CVS Health.",
+      ],
+    },
+    {
+      name: "Kainoa",
+      role: "",
+      bio: [],
+    },
+    {
+      name: "Kendall Marquez",
+      role: "Substitute Coach",
+      bio: [
+        "Born and raised in Flagstaff, I dove with Nikki Huffman on the Northern Arizona Divers club team for five years, after about three years of competitive gymnastics. In college I dove all four years for Northern Arizona University's Division I swim and dive team, qualifying for NCAA Zones three of those years on 1-meter and 3-meter springboard.",
+        "I graduated from NAU in May 2025 with a bachelor's degree in construction management, which led me to the Valley working as a field engineer at Sundt Construction in transportation. I've coached at Northern Arizona diving camps, helped out with the NAD club, and recently started helping out here at EVDC. I love this sport, and I'm excited to share it and keep diving a part of my life.",
+      ],
+    },
+    {
+      name: 'Raquel "Rocky" Gonzales',
+      role: "Substitute Coach",
+      bio: [
+        "Growing up in Chandler, I started in competitive gymnastics before moving into trampoline and tumbling, qualifying for Nationals in 2008. I transitioned to diving as a freshman at Hamilton High School, becoming a three-time Division I State Qualifier, team captain, and school record-holder for both six dives (216.0) and eleven dives (384.7). I later qualified for the 2014 USA Diving Age Group Nationals, placing 24th on platform representing Sun Devil Divers.",
+        "I went on to dive NCAA Division I at Northern Arizona University, where I earned the second-highest platform score in program history, three NCAA Zone qualifications, and nine All-WAC honors. Today I bring that competitive background into coaching — helping athletes develop strong fundamentals, confidence, and the mental toughness to excel in and out of the pool.",
+      ],
+    },
   ],
 } as const;
 
