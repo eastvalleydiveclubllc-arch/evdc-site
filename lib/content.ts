@@ -148,21 +148,21 @@ export const join = {
   steps: [
     {
       n: "01",
-      name: "Come to an intro class",
+      name: "Free trial class",
       blurb:
-        "Show up, meet a coach, get in the water. No commitment. Dress code: swimsuit + towel.",
+        "Show up, meet a coach, get in the water. Free, no commitment. Dress code: swimsuit + towel.",
     },
     {
       n: "02",
-      name: "Register for the quarter",
+      name: "Sign up in the parent portal",
       blurb:
-        "Registration opens with each season. Pick your program, sign waivers, you're on the roster.",
+        "Add your family and diver info, see which classes have open spots, and pick your days.",
     },
     {
       n: "03",
-      name: "Monthly dues by PayPal",
+      name: "Monthly billing, handled",
       blurb:
-        "Simple, predictable billing. Cancel any month. No contracts.",
+        "Card on file in the portal. Simple, predictable monthly dues.",
     },
   ],
 } as const;
