@@ -107,9 +107,15 @@ export const coach = {
   headline: "Meet the coaches",
   coaches: [
     {
-      name: "Laura",
-      role: "",
-      bio: [],
+      name: "Laura Sanchez",
+      role: "Head Coach",
+      bio: [
+        "Originally from Wisconsin, I was a four-time state qualifier. I began club diving with the Schroeder Dive Team during my junior year and went on to dive collegiately at Minnesota State Mankato. As a freshman I qualified for the NCAA Division II championships, but a knee injury toward the end of the season ultimately ended my competitive diving career.",
+        "After transitioning to coaching, I led several Wisconsin high school athletes to state championships and was honored with a nomination for Coach of the Year. Alongside coaching, I also worked in the marketing department at Harley-Davidson, gaining valuable experience in leadership and communication.",
+        "In 2016 I moved to Arizona, and I joined East Valley Dive Club in 2017. Since then, I've had the privilege of watching countless divers grow within the program and continue their careers at the collegiate level. For me, coaching is about more than just diving — it's about helping young athletes develop life skills, confidence, leadership, and the resilience to push beyond their comfort zones.",
+        "I became head coach of EVDC in the fall of 2022 and continue to coach high school diving as well, where I've had multiple athletes qualify for the AIA State Meet and have been voted Coach of the Year.",
+        "Outside the pool, I'm a proud mom of three boys and love spending my time with family.",
+      ],
     },
     {
       name: "Kayla Huffman",
