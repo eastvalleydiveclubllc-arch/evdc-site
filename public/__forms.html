@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify form registration</title>
+  </head>
+  <body>
+    <!--
+      Build-time registration for Netlify Forms. Netlify scans published HTML
+      for data-netlify forms; this file guarantees the "reviews" form is found
+      regardless of how Next renders the React version. Field names must stay
+      in sync with components/reviews.tsx.
+    -->
+    <form name="reviews" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="review"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

@@ -200,6 +200,30 @@ export const path = {
   ],
 } as const;
 
+// Reviews flow: parents submit through the on-site form (Netlify Forms →
+// email notification to the club). Laura picks which ones publish; paste
+// approved quotes into `quotes` below — their words, typo-fixes only, same
+// policy as coach bios. Keep divers' names out unless the parent
+// deliberately included them. While `quotes` is empty, the section shows
+// the form alone.
+export const reviews = {
+  eyebrow: "Parents",
+  title: "What families say.",
+  sub: "Straight from EVDC parents. Every review is read by a coach before it appears here.",
+  quotes: [] as { quote: string; name: string; detail?: string }[],
+  form: {
+    heading: "Leave a review",
+    sub: "Have a diver in the program? Tell other families what to expect.",
+    nameLabel: "Your name",
+    emailLabel: "Email (optional)",
+    reviewLabel: "Your review",
+    submitLabel: "Send review",
+    sending: "Sending…",
+    success: "Thanks — Coach Laura reads every one.",
+    error: "That didn't go through. Email us instead:",
+  },
+} as const;
+
 export const join = {
   eyebrow: "How to Join",
   title: "Three steps. No guesswork.",

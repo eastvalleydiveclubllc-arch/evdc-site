@@ -42,13 +42,33 @@ All site copy lives in **`lib/content.ts`**. Edit that one file to change any
 wording on the site; the components read from it. Images still needed are
 listed in `IMAGE_SLOTS.md`.
 
+### Parent reviews
+
+The Reviews section has a "Leave a review" form backed by **Netlify Forms**
+(form name `reviews`) — no server needed on a static export. Two things to
+know:
+
+1. **Netlify setup (one-time):** form detection must be enabled in the site's
+   Netlify dashboard (Site configuration → Forms) *before* the deploy that
+   ships the form, and an email notification should point at the club Gmail so
+   submissions reach Laura.
+2. **Publishing a review:** nothing appears on the site automatically.
+   When Laura approves a submission, paste it into `reviews.quotes` in
+   `lib/content.ts` (the parent's words, typo-fixes only — leave divers'
+   names out unless the parent deliberately included them) and push; Netlify
+   redeploys. While `quotes` is empty the section shows only the form.
+
+`public/__forms.html` is a hidden mirror of the form that guarantees Netlify's
+build-time detection finds it — keep its field names in sync with
+`components/reviews.tsx`.
+
 ### Known placeholders
 
 The first version was built before any details were gathered from the club, so
 some content is deliberately unfinished and some is unverified:
 
-- The coach section is intentionally **name-free** until the club confirms who
-  coaches — don't invent a name.
+- The coach section is live with five bios (2026-08-12); Kainoa's bio and all
+  headshots are still inbound.
 - No pricing or practice schedule anywhere on the site (real phone + email added 2026-08-12).
 - Registration + parent portal now link to JackRabbit (added 2026-08-12); contact email/phone are real.
 - `public/logo.svg` is a stand-in, not the club's actual logo.
