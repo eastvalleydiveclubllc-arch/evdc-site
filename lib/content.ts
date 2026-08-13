@@ -159,14 +159,16 @@ export const coach = {
   ],
 } as const;
 
+// Facility facts are Laura's own list (2026-08-12) — don't embellish.
 export const location = {
   eyebrow: "Where We Train",
-  title: "East Mesa. Heated pool. Full diving well.",
+  title: "Skyline Aquatic Center,\nEast Mesa.",
   bullets: [
-    "Springboard + platform towers",
-    "Year-round heated facility",
-    "Dryland training area on-site",
-    "Free parking, easy access from the 60 and 202",
+    "Three 1-meter boards and one 3-meter board",
+    "Pool heated during the winter months",
+    "Classroom for seasonal dryland training",
+    "Shaded bleachers for spectators",
+    "City of Mesa lifeguards",
   ],
 } as const;
 

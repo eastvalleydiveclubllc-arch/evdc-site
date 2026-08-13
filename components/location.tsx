@@ -8,7 +8,7 @@ export function Location() {
           <p className="eyebrow" style={{ color: "var(--color-stone-500)" }}>
             {location.eyebrow}
           </p>
-          <h2 className="font-display mt-6 text-ink text-4xl sm:text-6xl md:text-7xl leading-[1.02] font-medium">
+          <h2 className="font-display mt-6 text-ink text-4xl sm:text-6xl md:text-7xl leading-[1.02] font-medium whitespace-pre-line">
             {location.title}
           </h2>
 
