@@ -224,6 +224,19 @@ export const reviews = {
   },
 } as const;
 
+// Copy for the hidden /coach-publish/ page — Laura's one-tap review
+// publisher. The page is unlinked and noindexed; she keeps it bookmarked.
+export const publishPage = {
+  eyebrow: "Coach tools",
+  heading: "Publish reviews",
+  sub: "New parent reviews wait off the site until you publish them. Anything you deleted (or marked as spam) in the Netlify Forms tab will never publish.",
+  button: "Publish new reviews to the site",
+  publishing: "Publishing — the site will update in about 2 minutes. You can close this page.",
+  error: "That didn't send. Check your connection and tap again.",
+  notConfigured:
+    "Not set up yet — the publish link hasn't been connected. Text Nate.",
+} as const;
+
 export const join = {
   eyebrow: "How to Join",
   title: "Three steps. No guesswork.",

@@ -48,19 +48,40 @@ The Reviews section has a "Leave a review" form backed by **Netlify Forms**
 (form name `reviews`) — no server needed on a static export. Two things to
 know:
 
-1. **Netlify setup (one-time):** form detection must be enabled in the site's
-   Netlify dashboard (Site configuration → Forms) *before* the deploy that
-   ships the form, and an email notification should point at the club Gmail so
-   submissions reach Laura.
-2. **Publishing a review:** nothing appears on the site automatically.
-   When Laura approves a submission, paste it into `reviews.quotes` in
-   `lib/content.ts` (the parent's words, typo-fixes only — leave divers'
-   names out unless the parent deliberately included them) and push; Netlify
-   redeploys. While `quotes` is empty the section shows only the form.
+1. **Netlify setup (one-time, done 2026-08-13):** form detection enabled in
+   the site's Netlify dashboard (Forms tab), email notification pointed at
+   the club Gmail. Additionally the self-serve publish flow needs two env
+   vars on the site (both created/owned by Laura): `NETLIFY_REVIEWS_TOKEN`
+   (a Netlify personal access token, used at build time to read submissions)
+   and `NEXT_PUBLIC_PUBLISH_HOOK_URL` (a build hook URL, baked into the
+   publish page).
+2. **Publishing a review — no developer involved:** nothing appears on the
+   site automatically. `scripts/fetch-reviews.mjs` runs before every build
+   (npm `prebuild`) and pulls the form's **verified** submissions from the
+   Netlify API into `lib/reviews-data.json`, which the Reviews section
+   renders (never the email or IP fields). Laura's flow:
+   - Notification email arrives with the review.
+   - **Good** → open the bookmarked `eastvalleydiving.com/coach-publish/`
+     page → tap **Publish new reviews to the site** → live in ~2 minutes.
+   - **Bad** → delete it (or Mark as spam) in the Netlify Forms tab; deleted
+     and spam submissions can never publish.
+   - **Remove one already on the site** → delete it in Forms, then tap
+     Publish again.
 
-`public/__forms.html` is a hidden mirror of the form that guarantees Netlify's
-build-time detection finds it — keep its field names in sync with
-`components/reviews.tsx`.
+Notes for developers:
+
+- The `/coach-publish/` page is unlinked and `noindex`; worst case someone
+  who finds it triggers a rebuild (costs a build credit, never content).
+- **A failing deploy with `fetch-reviews: FAILED` in the log is deliberate**:
+  the token was present but the API call failed (expired token, or Laura
+  reset her Netlify password, which invalidates all tokens). Fix = Laura
+  generates a fresh token and updates `NETLIFY_REVIEWS_TOKEN`. The build
+  fails rather than silently shipping an empty review list.
+- `reviews.quotes` in `lib/content.ts` still works for hand-pinned/edited
+  quotes; they render ahead of the fetched ones.
+- `public/__forms.html` is a hidden mirror of the form that guarantees
+  Netlify's build-time detection finds it — keep its field names in sync
+  with `components/reviews.tsx`.
 
 ### Known placeholders
 

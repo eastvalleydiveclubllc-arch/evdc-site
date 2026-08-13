@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Fully static export. The site has no API routes, server actions, forms or
-  // ISR, so there is nothing to run on a server. This keeps the Netlify deploy
+  // Fully static export. The site has no API routes, server actions or ISR
+  // (the review form posts to Netlify Forms, not to us), so there is nothing
+  // to run on a server. This keeps the Netlify deploy
   // off the Next.js runtime entirely — no serverless functions, so effectively
   // no compute credits burned against the plan's monthly allowance.
   output: "export",

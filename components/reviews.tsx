@@ -2,10 +2,24 @@
 
 import { useState } from "react";
 import { reviews, site } from "@/lib/content";
+import reviewsData from "@/lib/reviews-data.json";
 
 // Submissions go to Netlify Forms (form name "reviews"). The hidden mirror
 // form in public/__forms.html registers the form at build time — keep its
 // field names in sync with this one.
+//
+// Published quotes come from two places: hand-pinned entries in
+// content.ts (`reviews.quotes`, listed first) and lib/reviews-data.json,
+// which scripts/fetch-reviews.mjs fills at build time from the form's
+// verified submissions. Laura publishes/removes via Netlify + the
+// /coach-publish/ page — no code change per review.
+const fetched = reviewsData as {
+  id: string;
+  quote: string;
+  name: string;
+  date: string;
+}[];
+
 export function Reviews() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
@@ -34,6 +48,16 @@ export function Reviews() {
   const inputClasses =
     "w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-bone placeholder:text-stone-500 focus:outline-none focus:border-white/40 transition-colors";
 
+  const quotes = [
+    ...reviews.quotes.map((q, i) => ({ key: `pinned-${i}`, ...q })),
+    ...fetched.map((r) => ({
+      key: r.id,
+      quote: r.quote,
+      name: r.name,
+      detail: undefined as string | undefined,
+    })),
+  ];
+
   return (
     <section id="reviews" className="relative bg-charcoal py-28 sm:py-40">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
@@ -49,11 +73,11 @@ export function Reviews() {
           </p>
         </div>
 
-        {reviews.quotes.length > 0 && (
+        {quotes.length > 0 && (
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
-            {reviews.quotes.map((q) => (
+            {quotes.map((q) => (
               <figure
-                key={q.quote}
+                key={q.key}
                 className="bg-charcoal p-8 sm:p-10 flex flex-col justify-between min-h-[240px]"
               >
                 <blockquote className="text-stone-200 leading-relaxed">
