@@ -23,13 +23,13 @@ export const site = {
 } as const;
 
 export const hero = {
-  eyebrow: "Mesa, Arizona · Springboard & Platform",
+  eyebrow: "Mesa, Arizona",
   headline: {
     pre: "Built for the ones",
     accent: "who go",
     post: "higher.",
   },
-  sub: "Arizona's top springboard and platform diving club. Beginner lessons through National qualifiers — under one roof.",
+  sub: "Year-round springboard diving in Mesa. Rec classes through the competition team, beginner to Nationals.",
   ctaPrimary: { label: "Join the Club", href: "#join" },
   ctaSecondary: { label: "See Programs", href: "#programs" },
 } as const;
@@ -37,70 +37,68 @@ export const hero = {
 export const about = {
   eyebrow: "The Club",
   title: "We teach the hardest moment\nin every sport: the takeoff.",
+  // Body is Laura's own copy (2026-08-21), lightly copyedited: parallelism in
+  // the first line, one Oxford comma, and the fragment in the last paragraph.
+  // Facts unchanged. Flagged to her for review.
   body: [
-    "East Valley Dive Club is a year-round springboard and platform program based in Mesa. We coach beginners finding their first back dive, high-school athletes pursuing state, and national-level qualifiers aiming for Zones and Nationals — all on the same deck, all built around the same fundamentals.",
-    "What makes the program different isn't the facility. It's the standard. We run practices the way championship divers train, from day one.",
+    "Whether it's your first diving class or you're heading to Nationals, we're excited for you to dive into the EVDC program!",
+    "Our mission is to help every diver build a strong foundation in the fundamentals of diving, develop new skills and dives, prepare for meets, compete with confidence, and proudly represent EVDC.",
+    "Being a great diver is about more than learning dives. Through our program, divers will develop confidence, discipline, critical thinking, physical and mental strength, conditioning, time management, and goal-setting skills. Along the way, we hope to create an environment where athletes have fun, make lifelong friends, celebrate personal accomplishments, and create memories that last far beyond the pool.",
+    "Our knowledgeable coaching staff trains year-round at Skyline Aquatic Center. We're sanctioned by AAU and USA Diving for our competitive season, and sponsored by Arena for team gear.",
   ],
+  // Laura's closing line, verbatim - rendered as a pull-quote, not a paragraph.
+  kicker:
+    "Dive in. Work hard. Have fun. Support your teammates. Set goals. Make memories.",
+  // Stats are Laura's wording (2026-08-21). "AAU & USA Diving" spells out what
+  // she wrote as "AAU & USA" - flagged to her.
   stats: [
-    { value: "All ages", label: "Beginner to National" },
-    { value: "Year-round", label: "Not a summer camp" },
-    { value: "Regionals → Nationals", label: "Competition path" },
+    { value: "All ages", label: "Beginner to team" },
+    { value: "Year-round", label: "Rec & competition team classes" },
+    { value: "→ Nationals", label: "AAU & USA Diving" },
   ],
 } as const;
 
 export const programs = {
   eyebrow: "Programs",
-  title: "Pick your lane.",
-  sub: "Six distinct programs. One standard.",
+  title: "Get started here.",
+  // Four programs per Laura (2026-08-21), replacing April's invented six.
+  // She supplied names only; blurbs are assembled from her own wording
+  // elsewhere in this file and are pending her sign-off.
   items: [
     {
-      name: "Beginner Lessons",
-      tag: "Ages 6+",
+      name: "Rec Class",
+      tag: "Ages 12 & Under",
       blurb:
-        "First dives, first flips, first time off the 3-meter. Structured curriculum — not open swim with a whistle.",
+        "First dives, first flips, first time on the boards. A structured foundation in the fundamentals of diving.",
       featured: false,
     },
     {
-      name: "Intermediate Lessons",
-      tag: "Ready to compete?",
+      name: "Rec Class",
+      tag: "Ages 13 & Up",
       blurb:
-        "The bridge from rec to team. Build a dive list, learn meet flow, earn a spot on the roster.",
+        "Same fundamentals, later start. Learn the boards, develop new skills and dives, and find out where the sport takes you.",
       featured: false,
     },
     {
-      name: "Recreational Team",
-      tag: "All levels",
+      name: "Pre-Team",
+      tag: "Coming soon",
       blurb:
-        "Train with a team. Compete if you want to. Discover if the sport is for you without committing to year-round.",
+        "The step between rec class and the competition team. Details coming soon.",
       featured: false,
     },
     {
-      name: "Competitive Team",
-      tag: "Regionals · Zones · Nationals",
+      name: "Competition Team",
+      tag: "AAU & USA Diving",
       blurb:
-        "Year-round, high-volume, high-standard. For divers pursuing the full USA Diving competition path.",
+        "Year-round training at Skyline Aquatic Center. Prepare for meets, compete with confidence, and represent EVDC.",
       featured: true,
-    },
-    {
-      name: "Gym-to-Dive",
-      tag: "For retired gymnasts",
-      blurb:
-        "A bridge program for gymnasts transitioning to diving. Leverage your air awareness — we'll teach the water.",
-      featured: false,
-    },
-    {
-      name: "HS Summer Camp",
-      tag: "May – August",
-      blurb:
-        "High-school divers only. Six weeks, four days a week, one goal: come back to your team better than you left.",
-      featured: false,
     },
   ],
 } as const;
 
 // Coach order is Laura's explicit instruction (2026-08-12):
 // Laura, Kayla, Amanda, Kainoa, Kendall, Rocky.
-// Laura's and Kainoa's bios are still inbound — empty bio = not rendered.
+// Kainoa's title is still unconfirmed; an empty role renders without a kicker.
 // Bios are the coaches' own words, lightly copyedited for typos only.
 export const coach = {
   eyebrow: "Coaching",
@@ -136,9 +134,13 @@ export const coach = {
       ],
     },
     {
-      name: "Kainoa",
+      name: "Kainoa Sauls",
       role: "",
-      bio: [],
+      bio: [
+        "I was a competitive diver for 12 years, during which I had the honor of being coached by several Olympians, including Michele Mitchell, Hongping Lee, and Rafa Quintero, as well as Olympic team coaches such as Dwight Dumais, Omar Ojeda, and John Winfield. Under their tutelage, I won regional titles and competed at the national and elite levels from the age of 10 through 18.",
+        "Later, I was recruited by Hongping Lee to dive at the University of Southern California before medically retiring from the sport due to back injuries.",
+        "My favorite category of dives has always been twisters, with the 5335D on 1m being my favorite, while the 205B on 3m has always been my go-to dive.",
+      ],
     },
     {
       name: "Kendall Marquez",

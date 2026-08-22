@@ -19,8 +19,8 @@ export function About() {
           <div className="flex flex-col gap-10 md:border-l md:border-white/10 md:pl-12">
             <div className="relative aspect-[3/2] overflow-hidden">
               <img
-                src="/images/springboard.jpg"
-                alt="Springboard over rippling pool water"
+                src="/images/skyline-board.jpg"
+                alt="A springboard at Skyline Aquatic Center reaching out over sunlit pool water"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -37,6 +37,10 @@ export function About() {
             ))}
           </div>
         </div>
+
+        <p className="font-display mt-20 max-w-3xl border-l-2 border-crimson pl-6 text-bone text-2xl sm:text-3xl leading-snug">
+          {about.kicker}
+        </p>
       </div>
     </section>
   );

@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   ),
   title: "East Valley Dive Club — Mesa, Arizona",
   description:
-    "Arizona's top springboard and platform diving club. Beginner lessons through National qualifiers. Mesa, AZ.",
+    "Year-round springboard diving club in Mesa, Arizona. Rec classes and competition team, beginner through Nationals. AAU and USA Diving sanctioned.",
   openGraph: {
     title: "East Valley Dive Club — Mesa, Arizona",
     description:
-      "Arizona's top springboard and platform diving club. Built for the ones who go higher.",
+      "Year-round springboard diving in Mesa, Arizona. Built for the ones who go higher.",
     type: "website",
     images: ["/images/springboard.jpg"],
   },

@@ -88,17 +88,33 @@ Notes for developers:
 The first version was built before any details were gathered from the club, so
 some content is deliberately unfinished and some is unverified:
 
-- The coach section is live with five bios (2026-08-12); Kainoa's bio and all
-  headshots are still inbound.
+- The coach section is live with all six bios (Kainoa Sauls's arrived
+  2026-08-21). Headshots are still inbound, and Kainoa is the one coach whose
+  title we don't have — his `role` is deliberately empty until Laura says.
 - No pricing or practice schedule anywhere on the site (real phone + email added 2026-08-12).
 - Registration + parent portal now link to JackRabbit (added 2026-08-12); contact email/phone are real.
 - `public/logo.svg` is a stand-in, not the club's actual logo.
-- Marketing claims in `lib/content.ts` (facility features, competitive
-  results) were written without verification and are pending sign-off.
+- The About body, the three About stats, and the four program names are
+  Laura's own words (2026-08-21). Her prose took three small copyedits
+  (parallelism, one Oxford comma, one sentence fragment) and the program
+  blurbs were assembled from her wording elsewhere in `content.ts` — all
+  flagged to her, none signed off yet.
+- The unverified April claims "Arizona's top ... club" and "springboard **and
+  platform**" were removed sitewide 2026-08-22 (her facility is springboards
+  only: 3x1m + 1x3m, no towers). "Regionals" survives as a step in the Path
+  section on purpose — that's the real USA Diving ladder, not the stat line
+  she edited.
 
 ## Image credits
 
-Both photos are CC0 / public domain (no attribution required); sources kept for the record:
+`skyline-board.jpg` is the club's own photo. The other two are CC0 / public
+domain (no attribution required); sources kept for the record:
 
-- `public/images/springboard.jpg` — "Crystal Clear Swimming Pool Water with Diving Board" (CC0), via Openverse / Flickr: https://live.staticflickr.com/502/18794504112_7bf6dca615_b.jpg
+- `public/images/skyline-board.jpg` — **the club's own photo**, shot by Laura
+  Sanchez at Skyline Aquatic Center, sent 2026-08-21 and used with her
+  permission. Not CC0 — do not reuse outside this site. Prepared with
+  `magick <src> -auto-orient -strip -gravity center -crop 3:2 +repage -resize 1400x -quality 78`;
+  the source was a portrait iPhone HEIC (EXIF orientation 6), and `-strip` is
+  required — phone photos carry GPS.
+- `public/images/springboard.jpg` — "Crystal Clear Swimming Pool Water with Diving Board" (CC0), via Openverse / Flickr: https://live.staticflickr.com/502/18794504112_7bf6dca615_b.jpg — no longer on the page; still the OG/share image (`app/layout.tsx`).
 - `public/images/underwater.jpg` — "swimming pool" underwater light (CC0), via Openverse / Flickr: https://live.staticflickr.com/2397/2140972884_c13023e9ef_b.jpg
