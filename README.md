@@ -116,5 +116,48 @@ domain (no attribution required); sources kept for the record:
   `magick <src> -auto-orient -strip -gravity center -crop 3:2 +repage -resize 1400x -quality 78`;
   the source was a portrait iPhone HEIC (EXIF orientation 6), and `-strip` is
   required — phone photos carry GPS.
+- `public/images/gallery/*.webp` — **the club's own photos**, sent by Laura
+  2026-08-12 and shipped 2026-08-22 after she confirmed media-release coverage.
+  Not CC0 — do not reuse outside this site. See "Photo slideshow" below.
 - `public/images/springboard.jpg` — "Crystal Clear Swimming Pool Water with Diving Board" (CC0), via Openverse / Flickr: https://live.staticflickr.com/502/18794504112_7bf6dca615_b.jpg — no longer on the page; still the OG/share image (`app/layout.tsx`).
 - `public/images/underwater.jpg` — "swimming pool" underwater light (CC0), via Openverse / Flickr: https://live.staticflickr.com/2397/2140972884_c13023e9ef_b.jpg
+
+### Photo slideshow
+
+`components/gallery.tsx` crossfades the photos in `gallery.photos`
+(`lib/content.ts`) on a two-second rotation, between the Join and Contact
+sections. `SLIDE_MS` and `FADE_MS` at the top of the component are the only
+knobs for pace. An empty `photos` array renders nothing, so the section is safe
+to ship dark.
+
+**Photos of minors.** Nothing goes in here until Laura confirms media-release
+coverage for that photo or set — this repo is public, so a commit is permanent
+and cannot be scrubbed without her (she owns the repo). Alt text describes
+action and setting only and never names a diver.
+
+**Adding a photo.** Pre-crop to 3:2 so it matches the frame, strip EXIF, and
+encode WebP:
+
+```
+magick <src> -auto-orient -strip \
+  -set option:cw '%[fx: min(w, h*3/2) ]' \
+  -set option:ch '%[fx: min(h, w*2/3) ]' \
+  -set option:oy '%[fx: round( (h - min(h, w*2/3)) * <PCT>/100 ) ]' \
+  -set option:ox '%[fx: round( (w - min(w, h*3/2))/2 ) ]' \
+  -crop '%[cw]x%[ch]+%[ox]+%[oy]' +repage \
+  -resize '1400x933>' -quality 72 public/images/gallery/NN-name.webp
+```
+
+`<PCT>` slides the 3:2 window vertically (50 = centred, 70 = lower — use it to
+keep heads and feet in frame on tall shots). `-auto-orient` first and `-strip`
+are both mandatory: iPhone photos arrive rotated by EXIF and carry GPS.
+`1400x933>` never upscales, so an already-small photo stays at its native size
+rather than faking resolution.
+
+WebP at q72 is roughly half the bytes of the equivalent JPEG and is visually
+indistinguishable at 1:1. Keep the whole set under ~1.5 MB — every slide
+downloads when the section renders. The current ten total 1.2 MB.
+
+Then add an entry to `gallery.photos` with `src` and `alt`. Filenames are
+numbered in display order; the order is deliberate (alternating scale, venue
+and brightness so each crossfade reads as a change).

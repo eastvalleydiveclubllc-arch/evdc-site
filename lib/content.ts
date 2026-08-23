@@ -272,3 +272,71 @@ export const contact = {
   sub: "Tap below — a coach will get back to you.",
   emailLabel: "Email the club",
 } as const;
+
+/** One slide in the photo slideshow. */
+export type GalleryPhoto = {
+  src: string;
+  /**
+   * Describes action and setting only. NEVER a diver's name — club standard
+   * for photos of minors, set 2026-08-12.
+   */
+  alt: string;
+  /** CSS object-position for the 3:2 crop. Omit for "center". */
+  focus?: string;
+};
+
+// Laura's club photos. She confirmed media-release coverage before these
+// shipped — the standing rule is that no photo of a diver goes up without it.
+// Order is deliberate, not chronological; see README.
+//
+// `eyebrow` and `title` are written here, not by Laura — on the ask-Laura list
+// alongside the rest of the 2026-08-21 round.
+export const gallery = {
+  eyebrow: "Photos",
+  title: "On the boards.",
+  label: "Club photos",
+  // Pre-cropped to 3:2 to match the frame, so `focus` is unused today — it is
+  // here for any photo added later that is not already 3:2.
+  photos: [
+    {
+      src: "/images/gallery/01-sunset-poolside.webp",
+      alt: "The team sitting along the edge of the pool under a burning orange sky, the color reflected across the water.",
+    },
+    {
+      src: "/images/gallery/02-lineup-bright-suits.webp",
+      alt: "Divers lined up along the pool deck in bright competition suits.",
+    },
+    {
+      src: "/images/gallery/03-group-selfie.webp",
+      alt: "Divers crowded into a group selfie on the pool deck, mid-laugh.",
+    },
+    {
+      src: "/images/gallery/04-deck-tower-flags.webp",
+      alt: "The team and a coach on the deck at a meet, banners strung behind them and a diving tower beyond.",
+    },
+    {
+      src: "/images/gallery/05-full-team-indoor.webp",
+      alt: "The club in team shirts at an indoor aquatic center, diving platforms behind them.",
+    },
+    {
+      src: "/images/gallery/06-three-divers-poolside.webp",
+      alt: "Two divers in team suits poolside with a younger club member between them.",
+    },
+    {
+      src: "/images/gallery/07-team-tower.webp",
+      alt: "Divers in team suits on the deck at an outdoor meet, a diving tower rising behind.",
+    },
+    {
+      src: "/images/gallery/08-away-meet-deck.webp",
+      alt: "The team in club shirts poolside at an away meet.",
+    },
+    {
+      src: "/images/gallery/09-team-towels-deck.webp",
+      alt: "Divers in team suits with towels over their shoulders, poolside at an outdoor meet.",
+    },
+    {
+      src: "/images/gallery/10-towels-blue-sky.webp",
+      alt: "Four divers on the board deck with towels around their shoulders under a clear sky.",
+    },
+  ] as GalleryPhoto[],
+} as const;

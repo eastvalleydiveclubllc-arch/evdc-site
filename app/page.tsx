@@ -10,6 +10,7 @@ import { Path } from "@/components/path";
 import { PoolBand } from "@/components/pool-band";
 import { Reviews } from "@/components/reviews";
 import { Join } from "@/components/join";
+import { Gallery } from "@/components/gallery";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -29,6 +30,7 @@ export default function Home() {
         <PoolBand />
         <Reviews />
         <Join />
+        <Gallery />
         <Contact />
       </main>
       <Footer />
