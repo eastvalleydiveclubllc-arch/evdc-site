@@ -122,12 +122,14 @@ export const coach = {
       ],
     },
     {
+      // Bio replaced 2026-08-24 at Kayla's request (texted to Nate, via Laura).
       name: "Kayla Huffman",
       role: "Assistant Coach",
       bio: [
-        "I'm originally from Flagstaff, where I dove for Northern Arizona Divers for 14 years. While diving for NAD I was a USA Diving National qualifier in the 14-15 and 16-18 age groups and qualified for AAU Nationals at 15, 16, 17, and 18, making finals in every age group.",
-        "After my diving career I spent two years as an assistant coach for NAD. I originally applied for the military, then an auto mechanics job brought me to Mesa — and along the way, EVDC reached out about coaching. I've been with the club about three years now.",
-        "When I'm not coaching, I work full time for an HVAC test and balance company in Tempe. And when I'm not working, I'm most likely camping or spending time with family and friends.",
+        "I'm originally from Flagstaff, where I dove for Northern Arizona Divers for 14 years. While diving for NAD I was a USA Diving National qualifier in the 14-15 and 16-18 age groups and qualified for AAU Nationals at 15, 16, 17, and 18, making finals in every age group. Diving under Nikki Kelsey and learning from her years of coaching is where I found my love of diving and coaching — and where I started following in my mother's footsteps, coaching alongside her as her assistant coach.",
+        "After my diving career I spent two years as an assistant coach for NAD. While coaching at NAD I originally applied for the military, then an auto mechanics job brought me to Mesa — and along the way, EVDC reached out about coaching. I've been with the club about three years now, and we've made amazing connections with our athletes and the other coaches.",
+        "When I'm not coaching at EVDC, I'm back in Flagstaff helping Nikki Kelsey, the head diving coach at NAU, with her summer diving camps as head counselor.",
+        "When I'm not at the pool or coaching, I work a full-time job for an HVAC test and balance company in Tempe — I'm very grateful to them for being super flexible with my crazy summer coaching schedule. And when I'm not coaching or working, I'm camping or spending time with my friends and family; it's my favorite thing to do, with coaching a close second.",
       ],
     },
     {
