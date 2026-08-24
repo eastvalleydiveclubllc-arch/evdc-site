@@ -29,7 +29,7 @@ export const hero = {
     accent: "who go",
     post: "higher.",
   },
-  sub: "Year-round springboard diving in Mesa. Rec classes through the competition team, beginner to Nationals.",
+  sub: "Year-round springboard diving in Mesa. Rec classes & Competition Team.",
   ctaPrimary: { label: "Join the Club", href: "#join" },
   ctaSecondary: { label: "See Programs", href: "#programs" },
 } as const;
@@ -64,6 +64,12 @@ export const programs = {
   // Four programs per Laura (2026-08-21), replacing April's invented six.
   // She supplied names only; blurbs are assembled from her own wording
   // elsewhere in this file and are pending her sign-off.
+  //
+  // The platform mention in the Competition Team blurb is Laura's own
+  // (2026-08-24) and is deliberate: the sitewide "springboard AND platform"
+  // positioning was removed 2026-08-22 because her facility is springboards
+  // only, but the team does travel offsite for platform practices. Don't
+  // sweep it as drift.
   items: [
     {
       name: "Rec Class",
@@ -90,7 +96,7 @@ export const programs = {
       name: "Competition Team",
       tag: "AAU & USA Diving",
       blurb:
-        "Year-round training at Skyline Aquatic Center. Prepare for meets, compete with confidence, and represent EVDC.",
+        "Year-round training at Skyline Aquatic Center, with travel offsite for platform practices. Prepare for meets, compete with confidence, and represent EVDC.",
       featured: true,
     },
   ],

@@ -29,12 +29,6 @@ export function Programs() {
               <p className="mt-6 text-stone-300 leading-relaxed text-sm sm:text-base">
                 {p.blurb}
               </p>
-              {p.featured && (
-                <div className="mt-6 inline-flex items-center gap-2 text-crimson text-xs font-medium uppercase tracking-[0.22em]">
-                  Flagship program
-                  <span aria-hidden>→</span>
-                </div>
-              )}
             </article>
           ))}
         </div>

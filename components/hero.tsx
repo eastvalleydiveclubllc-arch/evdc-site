@@ -65,7 +65,10 @@ export function Hero() {
             {hero.headline.post}
           </span>
         </h1>
-        <p className="fade-up fade-up-3 mt-8 max-w-xl text-base sm:text-lg text-stone-300 leading-relaxed">
+        {/* text-balance: her shortened sub (2026-08-24) otherwise breaks
+            "Competition / Team." across lines. Balanced, it lands as the
+            two lines she wrote. */}
+        <p className="fade-up fade-up-3 mt-8 max-w-xl text-base sm:text-lg text-stone-300 leading-relaxed text-balance">
           {hero.sub}
         </p>
         <div className="fade-up fade-up-4 mt-10 flex flex-col sm:flex-row gap-4">

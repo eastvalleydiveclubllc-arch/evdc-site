@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ),
   title: "East Valley Dive Club — Mesa, Arizona",
   description:
-    "Year-round springboard diving club in Mesa, Arizona. Rec classes and competition team, beginner through Nationals. AAU and USA Diving sanctioned.",
+    "Year-round springboard diving club in Mesa, Arizona. Rec classes and competition team. AAU and USA Diving sanctioned.",
   openGraph: {
     title: "East Valley Dive Club — Mesa, Arizona",
     description:

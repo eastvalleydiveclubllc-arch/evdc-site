@@ -103,7 +103,16 @@ some content is deliberately unfinished and some is unverified:
   platform**" were removed sitewide 2026-08-22 (her facility is springboards
   only: 3x1m + 1x3m, no towers). "Regionals" survives as a step in the Path
   section on purpose — that's the real USA Diving ladder, not the stat line
-  she edited.
+  she edited. **Platform is named once again, on purpose:** Laura said
+  2026-08-24 that the team travels offsite for platform practices, so the
+  Competition Team blurb says so. What was removed was the sitewide *platform
+  positioning*, not this — don't sweep it as drift.
+- Laura's 2026-08-24 round (also unsigned-off): the hero sub is her wording
+  ("Rec classes & Competition Team", "beginner to Nationals" cut — swept from
+  the meta description too), the "Flagship program" label is gone from the
+  Competition Team card (the crimson top rule stays), and the clause carrying
+  her platform fragment — "with travel offsite for platform practices" — is
+  written here, not by her.
 
 ## Image credits
 
