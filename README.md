@@ -55,6 +55,11 @@ know:
    (a Netlify personal access token, used at build time to read submissions)
    and `NEXT_PUBLIC_PUBLISH_HOOK_URL` (a build hook URL, baked into the
    publish page).
+   **🔴 Status 2026-08-28: neither env var was ever created.** Laura tried and
+   couldn't get it working (08-27), so the self-serve flow below is NOT live —
+   publishing is currently the manual path: she forwards reviews, they go into
+   `reviews.quotes` in `lib/content.ts`, and a push deploys them. Everything
+   below stays accurate for the day the env vars exist; nothing needs rebuilding.
 2. **Publishing a review — no developer involved:** nothing appears on the
    site automatically. `scripts/fetch-reviews.mjs` runs before every build
    (npm `prebuild`) and pulls the form's **verified** submissions from the
@@ -78,7 +83,13 @@ Notes for developers:
   generates a fresh token and updates `NETLIFY_REVIEWS_TOKEN`. The build
   fails rather than silently shipping an empty review list.
 - `reviews.quotes` in `lib/content.ts` still works for hand-pinned/edited
-  quotes; they render ahead of the fetched ones.
+  quotes; they render ahead of the fetched ones. **The two lists are deduped
+  on normalised quote text**, so the nine reviews pinned by hand on 2026-08-28
+  won't render twice on the day the fetch pipeline is switched on — they came
+  out of the same Netlify submissions the script reads.
+- The quote wall is CSS multi-column, not a grid, because reviews run from one
+  line to 140 words and grid rows stretch every cell to the tallest. Cards use
+  `break-inside-avoid`; don't convert it back to `grid-cols-*`.
 - `public/__forms.html` is a hidden mirror of the form that guarantees
   Netlify's build-time detection finds it — keep its field names in sync
   with `components/reviews.tsx`.

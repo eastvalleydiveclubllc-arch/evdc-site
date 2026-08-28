@@ -217,10 +217,59 @@ export const path = {
 // deliberately included them. While `quotes` is empty, the section shows
 // the form alone.
 export const reviews = {
-  eyebrow: "Parents",
+  eyebrow: "Families",
   title: "What families say.",
-  sub: "Straight from EVDC parents. Every review is read by a coach before it appears here.",
-  quotes: [] as { quote: string; name: string; detail?: string }[],
+  sub: "Straight from EVDC families and alumni. Every review is read by a coach before it appears here.",
+  // Parents' and alumni's own words, from Laura's 2026-08-28 batch out of
+  // Netlify Forms. Copyedited for typos only. See README "Publishing a review".
+  quotes: [
+    {
+      quote:
+        "My daughter has dove with EVDC for several years, and I believe it has helped develop her into the confident, resilient, driven young woman she is today. Everyone is friendly, professional, and more importantly, fun. This team has given her a plethora of memorable experiences and a second family I know she will always cherish.",
+      name: "Stacy Killough",
+    },
+    {
+      quote:
+        "We couldn’t be happier with our experience at East Valley Dive Club. The coaches have made such a meaningful difference in both of our kids’ lives, and we are incredibly grateful to be a part of this team. With our oldest, their guidance has played a huge role in his growth and has helped him reach the level of being recruited by Division I programs. Just as importantly, they have created such a welcoming and supportive environment for our youngest, who has special needs. That means more to our family than we can put into words. What we appreciate most is that the coaches recognize that every athlete is different and they meet the child where they are. Whether the athlete is working toward competing at the highest level or simply finding joy in the sport, they’ve got you. We highly recommend East Valley Dive Club!",
+      name: "Kori Sprintz",
+    },
+    {
+      quote:
+        "East Valley Dive Club has been amazing for my son. From the first day he joined the club, the coaches have been very committed to his development as a diver as well as a young man. They care about their divers and are very knowledgeable and skilled in their coaching. I’m a former coach and I recognize a good program and EVDC is definitely a program you should send your kids to for diving.",
+      name: "Michael Romero",
+    },
+    {
+      quote:
+        "After 13 years of competitive gymnastics my daughter decided to transition into diving at EVDC. Coach Laura and her team have made the switch so easy. After a year at East Valley my daughter is competing dives I never even imagined! We love the EVDC program, coaches and families!",
+      name: "Kirsten Emmerton",
+    },
+    {
+      quote:
+        "My teenage boys have been diving at East Valley for the past four years and have had a wonderful experience! The coaches really care about the kids, work hard to help them learn and improve, and provide year round opportunities for growth. We especially love Laura and appreciate how organized and involved she is in each diver’s journey. We highly recommend East Valley Dive Club!",
+      name: "Stephanie Evans",
+    },
+    {
+      quote:
+        "Can’t say enough about our wonderful coaches and the joy of watching our son’s diving journey to nationals for the past 5 years. Because of the excellent coaching his dive list depth and growth are evident and continue to push for his best.",
+      name: "Sheila Smith",
+    },
+    {
+      quote:
+        "EVDC is the best club in Arizona!! I dove there for about 5 years and it was the best ever! The coaches are amazing and the program is awesome! Highly recommend and everything about it is amazing!",
+      name: "Abbey Gardner",
+      detail: "Former diver",
+    },
+    {
+      quote:
+        "We love EVDC! My daughter started club dive after doing a season of high school dive. She learned so much at EVDC and placed higher at state dive year after year because of it.",
+      name: "Joleen Stratton",
+    },
+    {
+      quote:
+        "We love EVDC!! So happy we found them! The coaches are amazing!",
+      name: "Hanna Little",
+    },
+  ] as { quote: string; name: string; detail?: string }[],
   form: {
     heading: "Leave a review",
     sub: "Have a diver in the program? Tell other families what to expect.",

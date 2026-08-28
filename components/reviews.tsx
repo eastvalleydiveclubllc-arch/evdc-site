@@ -48,6 +48,10 @@ export function Reviews() {
   const inputClasses =
     "w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-bone placeholder:text-stone-500 focus:outline-none focus:border-white/40 transition-colors";
 
+  // Laura's first nine reviews were pasted into content.ts by hand, out of
+  // the same Netlify submissions scripts/fetch-reviews.mjs reads. Dedupe on
+  // the quote text so switching the fetch pipeline on can't render them twice.
+  const seen = new Set<string>();
   const quotes = [
     ...reviews.quotes.map((q, i) => ({ key: `pinned-${i}`, ...q })),
     ...fetched.map((r) => ({
@@ -56,7 +60,15 @@ export function Reviews() {
       name: r.name,
       detail: undefined as string | undefined,
     })),
-  ];
+  ].filter((q) => {
+    const fingerprint = q.quote
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+    if (seen.has(fingerprint)) return false;
+    seen.add(fingerprint);
+    return true;
+  });
 
   return (
     <section id="reviews" className="relative bg-charcoal py-28 sm:py-40">
@@ -73,17 +85,21 @@ export function Reviews() {
           </p>
         </div>
 
+        {/* Multi-column, not a grid: reviews run from one line to a hundred
+            words, and grid rows stretch every cell to the tallest one. Columns
+            let each card end where its text ends. break-inside-avoid keeps a
+            card from splitting across a column. */}
         {quotes.length > 0 && (
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          <div className="mt-16 columns-1 md:columns-2 lg:columns-3 gap-x-16">
             {quotes.map((q) => (
               <figure
                 key={q.key}
-                className="bg-charcoal p-8 sm:p-10 flex flex-col justify-between min-h-[240px]"
+                className="break-inside-avoid border-t border-white/10 pt-8 mb-14"
               >
                 <blockquote className="text-stone-200 leading-relaxed">
                   &ldquo;{q.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-8">
+                <figcaption className="mt-6">
                   <div className="text-bone font-medium">{q.name}</div>
                   {q.detail && (
                     <div className="mt-1 text-xs uppercase tracking-[0.22em] text-stone-400">
